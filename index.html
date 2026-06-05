@@ -10,7 +10,7 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -18,29 +18,29 @@
             padding: 40px 20px;
             color: #333;
         }
-        
+
         .container {
             max-width: 800px;
             margin: 0 auto;
         }
-        
+
         .header {
             text-align: center;
             margin-bottom: 40px;
             color: white;
         }
-        
+
         .header h1 {
             font-size: 2.5em;
             margin-bottom: 10px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
         }
-        
+
         .header p {
             font-size: 1.1em;
             opacity: 0.9;
         }
-        
+
         .warning {
             background: #fff3cd;
             border-left: 4px solid #ffc107;
@@ -49,11 +49,11 @@
             border-radius: 0 8px 8px 0;
             color: #856404;
         }
-        
+
         .warning strong {
             color: #d39e00;
         }
-        
+
         .card {
             background: white;
             border-radius: 12px;
@@ -62,17 +62,17 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             transition: transform 0.2s;
         }
-        
+
         .card:hover {
             transform: translateY(-2px);
         }
-        
+
         .card h2 {
             color: #667eea;
             margin-bottom: 15px;
             font-size: 1.3em;
         }
-        
+
         .link-box {
             background: #f8f9fa;
             border: 2px solid #e9ecef;
@@ -84,7 +84,7 @@
             gap: 10px;
             flex-wrap: wrap;
         }
-        
+
         .link-box code {
             background: #e9ecef;
             padding: 8px 12px;
@@ -96,7 +96,7 @@
             flex: 1;
             min-width: 200px;
         }
-        
+
         .copy-btn {
             background: #667eea;
             color: white;
@@ -108,20 +108,20 @@
             transition: all 0.2s;
             white-space: nowrap;
         }
-        
+
         .copy-btn:hover {
             background: #5a6fd6;
             transform: scale(1.05);
         }
-        
+
         .copy-btn:active {
             transform: scale(0.95);
         }
-        
+
         .copy-btn.copied {
             background: #28a745;
         }
-        
+
         .tag {
             display: inline-block;
             padding: 4px 10px;
@@ -130,7 +130,7 @@
             font-weight: bold;
             margin-left: 8px;
         }
-        
+
         .tag.all { background: #e3f2fd; color: #1976d2; }
         .tag.tw { background: #fce4ec; color: #c2185b; }
         .tag.hk { background: #fff3e0; color: #e65100; }
@@ -138,31 +138,31 @@
         .tag.kr { background: #e8f5e9; color: #388e3c; }
         .tag.sg { background: #fff8e1; color: #f9a825; }
         .tag.us { background: #e0f2f1; color: #00796b; }
-        
+
         .footer {
             text-align: center;
             color: rgba(255,255,255,0.7);
             margin-top: 40px;
             font-size: 0.9em;
         }
-        
+
         .footer a {
             color: white;
             text-decoration: none;
             border-bottom: 1px dashed rgba(255,255,255,0.5);
         }
-        
+
         .footer a:hover {
             border-bottom-style: solid;
         }
-        
+
         .update-time {
             text-align: center;
             color: rgba(255,255,255,0.8);
             margin-bottom: 20px;
             font-size: 0.9em;
         }
-        
+
         @media (max-width: 600px) {
             .header h1 {
                 font-size: 1.8em;
@@ -176,6 +176,7 @@
             }
         }
     </style>
+<base target="_blank">
 </head>
 <body>
     <div class="container">
@@ -183,17 +184,17 @@
             <h1>📋 代理节点订阅</h1>
             <p>wt20230521/9527 · 自动抓取 · 每6小时更新</p>
         </div>
-        
+
         <div class="update-time">
             ⏰ 最后更新：<span id="updateTime">加载中...</span>
         </div>
-        
+
         <div class="warning">
             <strong>⚠️ 重要提示：</strong>
             请直接复制下方的 <strong>raw 链接</strong> 到代理工具中使用。
             不要复制 GitHub 网页上的 blob 链接！
         </div>
-        
+
         <div class="card">
             <h2>🌍 全部节点 <span class="tag all">ALL</span></h2>
             <div class="link-box">
@@ -201,47 +202,47 @@
                 <button class="copy-btn" onclick="copyLink('link-all', this)">📋 复制</button>
             </div>
         </div>
-        
+
         <div class="card">
             <h2>🌏 按地区分类</h2>
-            
+
             <div class="link-box">
                 <code id="link-tw">https://raw.githubusercontent.com/wt20230521/9527/main/proxies_TW.txt</code>
                 <span class="tag tw">台湾</span>
                 <button class="copy-btn" onclick="copyLink('link-tw', this)">📋 复制</button>
             </div>
-            
+
             <div class="link-box">
                 <code id="link-hk">https://raw.githubusercontent.com/wt20230521/9527/main/proxies_HK.txt</code>
                 <span class="tag hk">香港</span>
                 <button class="copy-btn" onclick="copyLink('link-hk', this)">📋 复制</button>
             </div>
-            
+
             <div class="link-box">
                 <code id="link-jp">https://raw.githubusercontent.com/wt20230521/9527/main/proxies_JP.txt</code>
                 <span class="tag jp">日本</span>
                 <button class="copy-btn" onclick="copyLink('link-jp', this)">📋 复制</button>
             </div>
-            
+
             <div class="link-box">
                 <code id="link-kr">https://raw.githubusercontent.com/wt20230521/9527/main/proxies_KR.txt</code>
                 <span class="tag kr">韩国</span>
                 <button class="copy-btn" onclick="copyLink('link-kr', this)">📋 复制</button>
             </div>
-            
+
             <div class="link-box">
                 <code id="link-sg">https://raw.githubusercontent.com/wt20230521/9527/main/proxies_SG.txt</code>
                 <span class="tag sg">新加坡</span>
                 <button class="copy-btn" onclick="copyLink('link-sg', this)">📋 复制</button>
             </div>
-            
+
             <div class="link-box">
                 <code id="link-us">https://raw.githubusercontent.com/wt20230521/9527/main/proxies_US.txt</code>
                 <span class="tag us">美国</span>
                 <button class="copy-btn" onclick="copyLink('link-us', this)">📋 复制</button>
             </div>
         </div>
-        
+
         <div class="card">
             <h2>📖 使用说明</h2>
             <ol style="line-height: 2; padding-left: 20px;">
@@ -251,24 +252,24 @@
                 <li>等待工具自动下载并解析节点列表</li>
             </ol>
         </div>
-        
+
         <div class="footer">
             <p>🔧 项目源码：<a href="https://github.com/wt20230521/9527" target="_blank">github.com/wt20230521/9527</a></p>
             <p style="margin-top: 10px;">⚡ 每6小时自动更新 · GitHub Actions 驱动</p>
         </div>
     </div>
-    
+
     <script>
         // 复制链接功能
         function copyLink(elementId, btn) {
             const code = document.getElementById(elementId);
             const text = code.innerText;
-            
+
             navigator.clipboard.writeText(text).then(() => {
                 const originalText = btn.innerText;
                 btn.innerText = '✅ 已复制';
                 btn.classList.add('copied');
-                
+
                 setTimeout(() => {
                     btn.innerText = originalText;
                     btn.classList.remove('copied');
@@ -283,15 +284,15 @@
                 textarea.select();
                 document.execCommand('copy');
                 document.body.removeChild(textarea);
-                
+
                 btn.innerText = '✅ 已复制';
                 setTimeout(() => {
                     btn.innerText = '📋 复制';
                 }, 2000);
             });
         }
-        
-        // 显示最后更新时间（基于文件名中的时间戳或固定值）
+
+        // 显示最后更新时间
         document.getElementById('updateTime').innerText = new Date().toLocaleString('zh-CN');
     </script>
 </body>
